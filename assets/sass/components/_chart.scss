@@ -1,0 +1,79 @@
+.chart {
+    &__group {
+        margin: 20px 0;
+        height: 100%;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+        width: 10vw;
+        text-align: right;
+    }
+    &__rows {
+        display: grid;
+        grid-template-columns: 10vw 1fr;
+        grid-gap: 5px 20px;
+    }
+
+    &__graph {
+        position: relative;
+    }
+
+    &__grid {
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &--line {
+            display: flex;
+            height: 100%;
+            /* Total width minus the width of the label plus the grid gap - 1 */
+            width: calc(100% - calc(10vw + 19px));
+
+            /* The width of the label + the grid gap-1 */
+            margin: 0 0 0 calc(10vw + 19px);
+            padding: 0;
+
+            li {
+                height: 100%;
+                width: 20%;
+                border-right: 1px solid #00000050;
+
+
+                &:first-child {
+                    border-left: 1px solid #00000050;
+                }
+            }
+        }
+    }
+
+    &-x {
+        align-self: center;
+        justify-self: flex-end;
+        text-align: right;
+    }
+    &-y {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 16px;
+        font-weight: 100;
+        padding: 2px 5px;
+        overflow: hidden;
+        min-width: 5px;
+
+        background: linear-gradient(to left, #FCB150, #FCB15050);
+        border-radius: 0 5px 5px 0;
+        color: #000;
+
+        animation: 1.5s ease-out bar;
+        transition: 1s ease-in-out width;
+
+        box-sizing: border-box;
+    }
+}
