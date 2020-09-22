@@ -24,6 +24,8 @@ $ sass --watch sass/style.scss:style.css --style compressed
 
 ## Chart component
 
+![Example Chart component](https://i.ibb.co/bQ47nr2/Screenshot-2020-09-22-at-20-33-06.png)
+
 ### Data object needed
 
 The object used to display the charts is an array that contains objects.
