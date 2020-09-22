@@ -21,3 +21,59 @@ In the `assets` directory.
 $ cd assets
 $ sass --watch sass/style.scss:style.css --style compressed
 ```
+
+## Chart component
+
+### Data object needed
+
+The object used to display the charts is an array that contains objects.
+```
+[
+  {
+      id: 1,
+      title: 'test',
+      rows: [
+          {
+              id: 1,
+              name: 'banana',
+              value: 50
+          },
+          {
+              id: 2,
+              name: 'orage',
+              value: 20
+          },
+          {
+              id: 3,
+              name: 'strawberry',
+              value: 80
+          }
+      ]
+  },
+  {
+      id: 2,
+      title: 'test',
+      rows: [
+          {
+              id: 1,
+              name: 'banana',
+              value: 50
+          },
+          {
+              id: 2,
+              name: 'orage',
+              value: 20
+          },
+          {
+              id: 3,
+              name: 'strawberry',
+              value: 80
+          }
+      ]
+  }
+]
+```
+
+Then this array has to be given by the `:groups` attribute
+
+`<ChartBars :groups="randomNumbers" />`
